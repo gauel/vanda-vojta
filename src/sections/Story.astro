@@ -1,0 +1,20 @@
+---
+import {Image} from "astro:assets"
+import vojta from "@assets/vojta.jpg"
+---
+
+<section id="story" class="h-screen flex items-center justify-center">
+	<div class="container max-w-7xl grid grid-cols-3 gap-16 ">
+		<Image src={vojta} alt="Fotka Vojty" class="rounded-[20px] col-span-1" />
+		<div class="flex flex-col text-xl col-span-2 gap-10 w-full">
+			<h2 class="text-6xl leading-none">Jak to všechno začalo?</h2>
+			<div class="columns-2 text-black poppins gap-16 text-balance">
+				<p class="text-2xl leading-[180%]">“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of Ostrava před pěti lety měla sejít se svým kolegou Vojtou u stánku Becherovky. Vanda byla velmi překvapená, když se následně Betka vydala ke klukovi, který neměl na obličeji jedinou pihu.</p>
+				<p>Fronta na Pálavské langoše trvala standardně hodinu, a tak si Vojta s Vandou krátili dlouhou chvíli hovorem. Poprvé jen ve dvou.</p>
+				<p>To, že se oba baví s pohodovým člověkem, poznali také podle toho, že do této konverzace zvládli začlenit, jaká jména svých budoucích dětí mají předvybrána.</p>
+				<p>Na závěr Vanda strčila peníze na langoš Vojtovi do výstřihu, to taky pomohlo. Vandě to nedalo, Vojtův smysl pro humor a taneční pohyby ji usvědčily v tom, že jejich interakce neskončí s hudebním festivalem.</p>
+				<p>V Praze si tedy u něj objednala předplatné fotek Fredíka, tehdy ještě kotěte, a jako platební metodu zvolila pivko v hospodě. A byla ruka v rukávě.</p>
+			</div>
+		</div>
+	</div>
+</section>

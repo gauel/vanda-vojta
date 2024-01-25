@@ -1,4 +1,12 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from "astro/config";
+import vercelStatic from '@astrojs/vercel/static';
+import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+	output: 'static',
+	adapter: vercelStatic(),
+	image: {
+		service: passthroughImageService(),
+	},
+	integrations: [tailwind()]
+});

@@ -1,5 +1,18 @@
 ---
+/* Fonts */
+import "@fontsource/prata";
+import "@fontsource/poppins";
 
+/* Styles */
+import "@src/styles/global.css";
+
+/* Sections */
+import Hero from "@sections/Hero.astro";
+import Story from "@sections/Story.astro";
+import Gallery from "@sections/Gallery.astro";
+import Invite from "@sections/Invite.astro";
+import About from "@sections/About.astro";
+import Footer from "@sections/Footer.astro";
 ---
 
 <html lang="en">
@@ -10,7 +23,14 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-beige-50 text-beige-300">
+		<main class="flex flex-col">
+			<Hero />
+			<Story />
+			<Gallery />
+			<Invite />
+			<About />
+			<Footer />
+		</main>
 	</body>
 </html>
