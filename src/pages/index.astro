@@ -13,18 +13,43 @@ import Gallery from "@sections/Gallery.astro";
 import Invite from "@sections/Invite.astro";
 import About from "@sections/About.astro";
 import Footer from "@sections/Footer.astro";
+
+/* Meta */
+const {
+	kicker = "Vanda & Vojta",
+	title = "",
+	description = "Zveme vás na svatbu. Potvrďte, prosím, svou účast skrze dotazník.",
+	shareImage = "/shareimage.jpg",
+	themeColor = "#FFFBF6",
+} = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={shareImage} />
+		<meta property="og:type" content="website" />
+
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={shareImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<meta name="theme-color" content={themeColor} />
+		<link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+		<link href="/touchicon.png" rel="apple-touch-icon" />
+		<title>{kicker}{title}</title>
 	</head>
 	<body class="bg-beige-50 text-beige-300">
 		<main class="flex flex-col">
+			<!--
+
+			-->
 			<Hero />
 			<Story />
 			<Gallery />

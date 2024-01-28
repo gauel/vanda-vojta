@@ -1,7 +1,18 @@
 ---
-
+import Ozdoba from "@components/Ozdoba.astro";
 ---
 
-<footer id="footer" class="h-screen flex items-center justify-center">
-	Footer
+<footer
+	id="footer"
+	class="md:h-screen max-h-[600px] flex flex-col items-center text-center justify-center gap-6 py-[60px]"
+>
+	<h3 class="text-4xl lg:text-6xl leading-none">Uvidíme se 17. srpna</h3>
+	<p
+		class="text-balance md:text-lg xl:text-xl leading-[180%] poppins text-black max-w-[36ch]"
+	>
+		Případné další dotazy směřujte prosím
+		<br />buď na svědkyni <a href="tel:+420731324783">Betku 731 324 783</a>
+		<br />nebo na <a href="tel:+420736209477">Vandu 736 209 477</a>
+	</p>
+	<Ozdoba style="w-[240px]" />
 </footer>

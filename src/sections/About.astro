@@ -1,7 +1,61 @@
 ---
-
+import Colors from "@components/Colors.astro";
 ---
 
-<section id="about" class="h-screen flex items-center justify-center">
-	About
+<section
+	id="about"
+	class="xl:h-screen xl:max-h-[600px] flex items-center justify-center py-[60px]"
+>
+	<div
+		class="container max-w-[50ch] lg:max-w-7xl flex flex-col lg:flex-row lg:items-start lg:text-left lg:gap-8 gap-10 md:gap-16 px-6 items-center text-center"
+	>
+		<div class="flex flex-col gap-4 flex-1">
+			<h4 class="text-4xl">Obřad a hostina</h4>
+			<div class="flex flex-col poppins text-black text-balance">
+				<p>Celá svatba proběhne na tomto místě:</p>
+				<a href="https://www.statekuprahy.cz/" target="_blank">
+					Statek u Prahy
+				</a>
+				<p>Škvorec, Masarykovo náměstí 41</p>
+			</div>
+			<h4 class="text-4xl">Dary</h4>
+			<a
+				href="https://youtu.be/ETxmCCsMoD0?t=47"
+				target="_blank"
+				class="poppins text-black underline mb-4">Více informací zde</a
+			>
+		</div>
+		<div class="flex flex-col gap-4 flex-1">
+			<h4 class="text-4xl">Ubytování</h4>
+			<div class="flex flex-col poppins text-black text-balance">
+				<p>
+					Po domluvě je možné se ubytovat přímo v areálu, ale kapacita je
+					omezena, takže budou upřednostněni starší příbuzní a rodiny s dětmi.
+				</p>
+				<p>
+					Pro ty, kteří se neubytují v areálu, bude doprava po okolí a do Prahy
+					zajištěna.
+				</p>
+				<p>
+					Přímo ve Škvorci se nachází hotel Da Antonio Residence, dále je možné
+					hledat ubytování v Říčanech.
+				</p>
+			</div>
+		</div>
+		<div class="flex flex-col gap-4 flex-1">
+			<h4 class="text-4xl">Dress code</h4>
+			<div class="flex flex-col poppins text-black lg:items-start items-center">
+				<a
+					href="https://www.moda.cz/dresscode-semiformal"
+					target="_blank"
+					class="underline mb-2">Semi Formal</a
+				>
+				<p>
+					Pokud váháte, jaké oděvy či doplňky vybrat, můžete se inspirovat naší
+					barevnou paletou:
+				</p>
+				<Colors />
+			</div>
+		</div>
+	</div>
 </section>

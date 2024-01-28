@@ -13,3 +13,11 @@ body {
 p {
 	@apply mb-4;
 }
+
+a {
+	@apply underline;
+}
+
+a:hover {
+	@apply opacity-80;
+}

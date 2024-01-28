@@ -1,22 +1,42 @@
 ---
 import { Image } from "astro:assets";
 import vojta from "@assets/vojta.jpg";
+import Arrow from "@components/Arrow.astro";
 ---
 
 <section
 	id="story"
-	class="h-screen max-h-[950px] flex items-center justify-center"
+	class="lg:h-screen min-h-[800px] xl:h-auto lg:max-h-[950px] flex items-center justify-center"
 >
-	<div class="container max-w-7xl grid grid-cols-3 gap-16">
-		<Image src={vojta} alt="Fotka Vojty" class="rounded-[20px] col-span-1" />
-		<div class="flex flex-col text-xl col-span-2 gap-10 w-full">
-			<h2 class="text-6xl leading-none">Jak to všechno začalo?</h2>
-			<div class="columns-2 text-black poppins gap-16 text-balance">
-				<p class="text-2xl leading-[180%]">
-					“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of
-					Ostrava před pěti lety měla sejít se svým kolegou Vojtou u stánku
-					Becherovky. Vanda byla velmi překvapená, když se následně Betka vydala
-					ke klukovi, který neměl na obličeji jedinou pihu.
+	<div
+		class="container max-w-5xl 2xl:max-w-7xl lg:grid grid-cols-2 2xl:grid-cols-3 gap-6 md:gap-10 lg:gap-16 px-6 md:px-12 flex flex-col pt-[60px] md:py-[60px] lg:pb-[150px]"
+	>
+		<div class="flex relative lg:col-span-1 md:w-full">
+			<div class="w-full">
+				<Image
+					src={vojta}
+					width={1024}
+					height={1491}
+					alt="Fotka Vojty"
+					class="rounded-[20px] object-cover max-h-[380px] lg:max-h-none w-full lg:sticky top-6"
+				/>
+			</div>
+		</div>
+		<div class="flex flex-col 2xl:col-span-2 gap-4 md:gap-10 w-full">
+			<h2 class="text-4xl md:text-5xl lg:text-6xl leading-none">
+				Jak to všechno začalo?
+			</h2>
+			<div
+				class="md:columns-2 lg:columns-1 2xl:columns-2 text-black poppins gap-8 lg:gap-16 text-balance md:text-lg 2xl:text-xl"
+			>
+				<p class="text-xl md:text-xl 2xl:text-2xl leading-[160%] relative">
+					<Arrow
+						style="absolute left-0 top-[5%] h-[330px] -translate-x-[110%] z-10 hidden"
+					/>
+					“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of Ostrava
+					před pěti lety měla sejít se svým kolegou Vojtou u stánku Becherovky. Vanda
+					byla velmi překvapená, když se následně Betka vydala ke klukovi, který
+					neměl na obličeji jedinou pihu.
 				</p>
 				<p>
 					Fronta na Pálavské langoše trvala standardně hodinu, a tak si Vojta s
