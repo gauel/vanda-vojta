@@ -18,7 +18,7 @@ import Arrow from "@components/Arrow.astro";
 					width={1024}
 					height={1491}
 					alt="Fotka Vojty"
-					class="rounded-[20px] object-cover max-h-[380px] lg:max-h-none w-full lg:sticky top-6"
+					class="rounded-[20px] object-cover max-h-[380px] lg:max-h-none w-full lg:sticky top-6 hidden"
 				/>
 			</div>
 		</div>
@@ -31,13 +31,22 @@ import Arrow from "@components/Arrow.astro";
 			>
 				<p class="text-xl md:text-xl 2xl:text-2xl leading-[160%] relative">
 					<Arrow
-						style="absolute left-0 top-[5%] h-[330px] -translate-x-[110%] z-10 hidden"
+						style="absolute left-0 top-[5%] h-[330px] -translate-x-[110%] z-10 hidden xl:block"
 					/>
 					“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of Ostrava
 					před pěti lety měla sejít se svým kolegou Vojtou u stánku Becherovky. Vanda
 					byla velmi překvapená, když se následně Betka vydala ke klukovi, který
 					neměl na obličeji jedinou pihu.
 				</p>
+				<div class="w-full">
+					<Image
+						src={vojta}
+						width={1024}
+						height={1491}
+						alt="Fotka Vojty"
+						class="rounded-[20px] object-cover max-h-[380px] w-full md:hidden"
+					/>
+				</div>
 				<p>
 					Fronta na Pálavské langoše trvala standardně hodinu, a tak si Vojta s
 					Vandou krátili dlouhou chvíli hovorem. Poprvé jen ve dvou.
@@ -45,12 +54,12 @@ import Arrow from "@components/Arrow.astro";
 				<p>
 					To, že se oba baví s pohodovým člověkem, poznali také podle toho, že
 					do této konverzace zvládli začlenit, jaká jména svých budoucích dětí
-					mají předvybrána.
+					mají předvybrána. Na závěr Vanda strčila peníze na langoš Vojtovi do
+					výstřihu, to taky pomohlo.
 				</p>
 				<p>
-					Na závěr Vanda strčila peníze na langoš Vojtovi do výstřihu, to taky
-					pomohlo. Vandě to nedalo, Vojtův smysl pro humor a taneční pohyby ji
-					usvědčily v tom, že jejich interakce neskončí s hudebním festivalem.
+					Vandě to nedalo, Vojtův smysl pro humor a taneční pohyby ji usvědčily
+					v tom, že jejich interakce neskončí s hudebním festivalem.
 				</p>
 				<p>
 					V Praze si tedy u něj objednala předplatné fotek Fredíka, tehdy ještě
