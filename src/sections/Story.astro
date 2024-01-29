@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import vojta from "@assets/vojta.jpg";
-import Arrow from "@components/Arrow.astro";
+import vojtaDesktop from "@assets/vojta-desktop.jpg";
+import vojtaMobile from "@assets/vojta-mobile.jpg";
 ---
 
 <section
@@ -14,11 +14,11 @@ import Arrow from "@components/Arrow.astro";
 		<div class="flex relative lg:col-span-1 md:w-full">
 			<div class="w-full">
 				<Image
-					src={vojta}
+					src={vojtaDesktop}
 					width={1024}
 					height={1491}
 					alt="Fotka Vojty"
-					class="rounded-[20px] object-cover max-h-[380px] lg:max-h-none w-full lg:sticky top-6 hidden"
+					class="rounded-[20px] object-cover max-h-[380px] lg:max-h-none w-full lg:sticky top-6 hidden lg:block"
 				/>
 			</div>
 		</div>
@@ -30,23 +30,18 @@ import Arrow from "@components/Arrow.astro";
 				class="md:columns-2 lg:columns-1 2xl:columns-2 text-black poppins gap-8 lg:gap-16 text-balance md:text-lg 2xl:text-xl"
 			>
 				<p class="text-xl md:text-xl 2xl:text-2xl leading-[160%] relative">
-					<Arrow
-						style="absolute left-0 top-[5%] h-[330px] -translate-x-[110%] z-10 hidden xl:block"
-					/>
-					“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of Ostrava
-					před pěti lety měla sejít se svým kolegou Vojtou u stánku Becherovky. Vanda
-					byla velmi překvapená, když se následně Betka vydala ke klukovi, který
-					neměl na obličeji jedinou pihu.
+					“Koukej po pihatým klukovi,” řekla Betka Vandě, když se na Colours of
+					Ostrava před pěti lety měla sejít se svým kolegou Vojtou u stánku
+					Becherovky. Vanda byla velmi překvapená, když se následně Betka vydala
+					ke klukovi, který neměl na obličeji jedinou pihu.
 				</p>
-				<div class="w-full">
-					<Image
-						src={vojta}
-						width={1024}
-						height={1491}
-						alt="Fotka Vojty"
-						class="rounded-[20px] object-cover max-h-[380px] w-full md:hidden"
-					/>
-				</div>
+				<Image
+					src={vojtaMobile}
+					width={1024}
+					height={1491}
+					alt="Fotka Vojty"
+					class="rounded-[20px] object-cover max-h-[380px] xs:max-w-[390px] md:max-w-none w-full lg:hidden mb-6"
+				/>
 				<p>
 					Fronta na Pálavské langoše trvala standardně hodinu, a tak si Vojta s
 					Vandou krátili dlouhou chvíli hovorem. Poprvé jen ve dvou.
