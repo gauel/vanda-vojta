@@ -1,0 +1,14 @@
+---
+const { time, text } = Astro.props;
+---
+
+<div class="flex gap-6 leading-none">
+	{time && <div class="w-[56px] shrink-0 text-right">{time}</div>}
+	{
+		text ? (
+			<div class="text-black">{text}</div>
+		) : (
+			<div class="h-[2px] w-full my-[7px] bg-black/10" />
+		)
+	}
+</div>

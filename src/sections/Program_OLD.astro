@@ -1,0 +1,42 @@
+---
+import Colors from '@components/Colors.astro';
+import Timenote from '@components/Timenote.astro';
+---
+
+<section id="about" class="xl:h-screen xl:max-h-[600px] flex items-center justify-center py-[60px]">
+	<div
+		class="container max-w-[50ch] lg:max-w-7xl flex flex-col lg:flex-row lg:items-start lg:text-left lg:gap-16 gap-10 md:gap-16 px-6 items-center justify-center text-center"
+	>
+		<div class="flex flex-col gap-4">
+			<h4 class="text-4xl">Harmonogram</h4>
+			<div class="flex flex-col poppins text-balance gap-4 mt-4">
+				<Timenote time="12:30" />
+				<Timenote time="13:30" text="Obřad" />
+				<Timenote time="14:15" text="Přípitky" />
+				<Timenote time="14:30" />
+				<Timenote time="16:30" />
+				<Timenote time="17:00" text="Kvízová hra" />
+				<Timenote time="18:30" />
+				∑
+				<Timenote time="19:00" text="První tanec" />
+				<Timenote time="21:30" />
+				<Timenote time="22:00" text="Vanda vs Vojta" />
+				<Timenote time="22:30" text="Party" />
+			</div>
+		</div>
+		<div class="flex flex-col gap-4">
+			<h4 class="text-4xl">Jídlo</h4>
+			<div class="flex flex-col poppins text-balance gap-4 mt-4">
+				<Timenote text="Welcome občerstvení" />
+				<Timenote />
+				<Timenote />
+				<Timenote text="Oběd" />
+				<Timenote text="Krájení dortu" />
+				<Timenote />
+				<Timenote text="Grilování" />
+				<Timenote />
+				<Timenote text="Večerní hody" />
+			</div>
+		</div>
+	</div>
+</section>

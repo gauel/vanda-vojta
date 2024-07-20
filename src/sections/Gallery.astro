@@ -1,64 +1,64 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 /* Images */
-import image1 from "@assets/gallery/1.jpg";
-import image2 from "@assets/gallery/2.jpg";
-import image3 from "@assets/gallery/3.jpg";
-import image4 from "@assets/gallery/4.jpg";
-import image5 from "@assets/gallery/5.jpg";
-import image6 from "@assets/gallery/6.jpg";
-import image7 from "@assets/gallery/7.jpg";
-import image8 from "@assets/gallery/8.jpg";
-import image9 from "@assets/gallery/9.jpg";
-import image10 from "@assets/gallery/10.jpg";
-import image11 from "@assets/gallery/11.jpg";
+import image1 from '@assets/gallery/1.jpg';
+import image2 from '@assets/gallery/2.jpg';
+import image3 from '@assets/gallery/3.jpg';
+import image4 from '@assets/gallery/4.jpg';
+import image5 from '@assets/gallery/5.jpg';
+import image6 from '@assets/gallery/6.jpg';
+import image7 from '@assets/gallery/7.jpg';
+import image8 from '@assets/gallery/8.jpg';
+import image9 from '@assets/gallery/9.jpg';
+import image10 from '@assets/gallery/10.jpg';
+import image11 from '@assets/gallery/11.jpg';
 
 const images = [
 	{
 		src: image1,
-		alt: "Svatba Terezky a Kuby",
+		alt: 'Svatba Terezky a Kuby'
 	},
 	{
 		src: image2,
-		alt: "Farní ples v Palkovicích",
+		alt: 'Farní ples v Palkovicích'
 	},
 	{
 		src: image3,
-		alt: "Achensee",
+		alt: 'Achensee'
 	},
 	{
 		src: image4,
-		alt: "Palkovické dožínky",
+		alt: 'Palkovické dožínky'
 	},
 	{
 		src: image5,
-		alt: "Riga",
+		alt: 'Riga'
 	},
 	{
 		src: image6,
-		alt: "Ples chemiků",
+		alt: 'Ples chemiků'
 	},
 	{
 		src: image7,
-		alt: "Colours of Ostrava",
+		alt: 'Colours of Ostrava'
 	},
 	{
 		src: image8,
-		alt: "Vanda je inženýrka!",
+		alt: 'Vanda je inženýrka!'
 	},
 	{
 		src: image9,
-		alt: "Dobytí Lysé hory",
+		alt: 'Dobytí Lysé hory'
 	},
 	{
 		src: image10,
-		alt: "Žádost o ruku na Korsice",
+		alt: 'Žádost o ruku na Korsice'
 	},
 	{
 		src: image11,
-		alt: "Vídeň",
-	},
+		alt: 'Vídeň'
+	}
 ];
 
 const getRandomRotation = () => {
@@ -72,10 +72,7 @@ const getRandomRotation = () => {
 };
 ---
 
-<section
-	id="gallery"
-	class="flex items-center justify-center py-[60px] md:py-[90px] lg:py-[150px]"
->
+<section id="gallery" class="flex items-center justify-center py-[60px] md:py-[90px] lg:py-[150px]">
 	<div class="container px-10 lg:px-16 xl:max-w-6xl">
 		<div class="flex flex-col">
 			{
@@ -84,6 +81,10 @@ const getRandomRotation = () => {
 						<Image
 							src={src}
 							alt={alt}
+							widths={[500, 1024, src.width]}
+							decoding="async"
+							loading="lazy"
+							sizes={`(max-width: 480px) 500px, (max-width: 1024px) 1024px, ${src.width}px`}
 							class="max-w-[300px] lg:max-w-[400px] xl:max-w-[440px]"
 							style={`transform: rotate(${getRandomRotation()}deg)`}
 						/>

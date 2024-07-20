@@ -1,26 +1,27 @@
 ---
 /* Fonts */
-import "@fontsource-variable/playfair-display";
-import "@fontsource/poppins";
+import '@fontsource-variable/playfair-display';
+import '@fontsource/poppins';
 
 /* Styles */
-import "@src/styles/global.css";
+import '@src/styles/global.css';
 
 /* Sections */
-import Hero from "@sections/Hero.astro";
-import Story from "@sections/Story.astro";
-import Gallery from "@sections/Gallery.astro";
-import Invite from "@sections/Invite.astro";
-import About from "@sections/About.astro";
-import Footer from "@sections/Footer.astro";
+import Hero from '@sections/Hero.astro';
+import Story from '@sections/Story.astro';
+import Gallery from '@sections/Gallery.astro';
+import Invite from '@sections/Invite.astro';
+import About from '@sections/About.astro';
+import Program from '@sections/Program.astro';
+import Footer from '@sections/Footer.astro';
 
 /* Meta */
 const {
-	kicker = "Vanda & Vojta",
-	title = "",
-	description = "Zveme vás na svatbu. Potvrďte, prosím, svou účast skrze dotazník.",
-	shareImage = "/shareimage.jpg",
-	themeColor = "#FFFBF6",
+	kicker = 'Vanda & Vojta',
+	title = '',
+	description = 'Zveme vás na svatbu. Potvrďte, prosím, svou účast skrze dotazník.',
+	shareImage = '/shareimage.jpg',
+	themeColor = '#FFFBF6'
 } = Astro.props;
 ---
 
@@ -55,6 +56,7 @@ const {
 			<Gallery />
 			<Invite />
 			<About />
+			<Program />
 			<Footer />
 		</main>
 	</body>

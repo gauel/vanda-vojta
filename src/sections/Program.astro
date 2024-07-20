@@ -1,0 +1,20 @@
+---
+import Colors from '@components/Colors.astro';
+import Timenote from '@components/Timenote.astro';
+
+import { Image } from 'astro:assets';
+
+import harmonogram from '@assets/harmonogram.svg';
+---
+
+<section id="program" class="flex items-center justify-center py-[60px]">
+	<div class="container max-w-[50ch] flex items-center justify-center text-center px-4">
+		<Image
+			src={harmonogram}
+			alt="Program"
+			width="700"
+			height="1170"
+			class="w-full min-w-[360px] max-w-[700px] object-cover rounded-lg"
+		/>
+	</div>
+</section>
